@@ -1,12 +1,13 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { ShoppingBag, Menu } from "lucide-react";
 import { Link, usePathname } from "@/i18n/navigation";
 import { families } from "@/lib/site";
 import { useCart, cartCount } from "@/store/cart";
 import { useUI } from "@/store/ui";
+import { gsap } from "@/lib/motion/gsap";
 import { Logo } from "./Logo";
 import { LocaleSwitch } from "./LocaleSwitch";
 import { cn } from "@/lib/utils/cn";
@@ -29,9 +30,21 @@ export function Navbar() {
   const items = useCart((s) => s.items);
   const openCart = useUI((s) => s.openCart);
   const toggleMenu = useUI((s) => s.toggleMenu);
+  const cartPing = useUI((s) => s.cartPing);
   const count = cartCount(items);
+  const cartBtn = useRef<HTMLButtonElement>(null);
 
   useEffect(() => setMounted(true), []);
+
+  // Blip al añadir al carrito (firma §8)
+  useEffect(() => {
+    if (cartPing === 0 || !cartBtn.current) return;
+    gsap.fromTo(
+      cartBtn.current,
+      { scale: 0.82 },
+      { scale: 1, duration: 0.5, ease: "elastic.out(1, 0.4)" },
+    );
+  }, [cartPing]);
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
     onScroll();
@@ -92,6 +105,7 @@ export function Navbar() {
         <div className="flex items-center gap-3 md:gap-5">
           <LocaleSwitch className="hidden sm:block" />
           <button
+            ref={cartBtn}
             type="button"
             onClick={openCart}
             className="relative grid h-10 w-10 place-items-center rounded-full transition-colors hover:bg-white/5"
