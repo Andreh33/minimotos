@@ -19,6 +19,9 @@ export function Cursor() {
 
     document.documentElement.classList.add("has-custom-cursor");
 
+    // Arrancar fuera de pantalla (evita el parking en 0,0 hasta el primer movimiento)
+    gsap.set([d, r], { x: -100, y: -100 });
+
     const dx = gsap.quickTo(d, "x", { duration: 0.08, ease: "power3" });
     const dy = gsap.quickTo(d, "y", { duration: 0.08, ease: "power3" });
     const rx = gsap.quickTo(r, "x", { duration: 0.32, ease: "power3" });

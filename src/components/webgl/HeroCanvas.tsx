@@ -39,18 +39,18 @@ const FRAG = /* glsl */ `
   vec3 field(vec2 uv){
     float t = uTime * 0.05;
     float n = fbm(uv * 2.6 + vec2(t, -t * 0.6));
-    vec3 col = vec3(0.018, 0.020, 0.030);
+    vec3 col = vec3(0.020, 0.023, 0.035);
     // glow azul moto
-    float g1 = smoothstep(0.65, 0.0, distance(uv, vec2(0.30 + 0.10 * sin(t), 0.42)));
-    col += g1 * vec3(0.12, 0.40, 1.0) * (0.35 + 0.4 * n);
+    float g1 = smoothstep(0.72, 0.0, distance(uv, vec2(0.30 + 0.10 * sin(t), 0.40)));
+    col += g1 * vec3(0.14, 0.45, 1.0) * (0.55 + 0.5 * n);
     // glow magenta
-    float g2 = smoothstep(0.72, 0.0, distance(uv, vec2(0.74 + 0.08 * cos(t * 0.8), 0.62)));
-    col += g2 * vec3(1.0, 0.12, 0.55) * (0.25 + 0.4 * n);
+    float g2 = smoothstep(0.78, 0.0, distance(uv, vec2(0.74 + 0.08 * cos(t * 0.8), 0.60)));
+    col += g2 * vec3(1.0, 0.14, 0.58) * (0.40 + 0.5 * n);
     // wash violeta
-    col += n * n * vec3(0.18, 0.05, 0.40) * 0.22;
+    col += n * n * vec3(0.20, 0.06, 0.45) * 0.32;
     // verde quad, abajo
-    float g3 = smoothstep(0.5, 0.0, distance(uv, vec2(0.5, -0.05))) ;
-    col += g3 * vec3(0.10, 0.9, 0.35) * 0.10;
+    float g3 = smoothstep(0.55, 0.0, distance(uv, vec2(0.62, 0.08)));
+    col += g3 * vec3(0.10, 0.9, 0.35) * 0.14;
     return col;
   }
 

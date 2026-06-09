@@ -1,0 +1,116 @@
+[   10223ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:2477
+[   10372ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:2477
+[   10619ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:2477
+[   10620ms] [LOG] [Fast Refresh] done in 155ms @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:2477
+[   10853ms] [ERROR] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
+      <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<SegmentViewNode>} forbidden={undefined} ...>
+        <RedirectBoundary>
+          <RedirectErrorBoundary router={{...}}>
+            <InnerLayoutRouter url="/" tree={[...]} params={{locale:"es"}} cacheNode={{rsc:{...}, ...}} ...>
+              <SegmentViewNode type="page" pagePath="[locale]/p...">
+                <SegmentTrieNode>
+                <HomePage>
+                  <Preloader>
+                    <div ref={{current:null}} className="fixed inse...">
+                      <Logo>
+                      <div className="relative g...">
+                        <Gauge value={0} className="h-28 w-28" id="preload-gauge">
+                          <svg viewBox="0 0 100 100" className="overflow-v..." role="img" aria-label="0%">
+                            <defs>
+                            <path>
+                            <path>
+                            <line>
+                            <line>
+                            <line>
+                            <line
++                             x1={22.08891369406431}
+-                             x1="22.088913694064313"
+                              y1={29.72140879590968}
++                             x2={23.706947682814203}
+-                             x2="23.706947682814207"
+                              y2={30.89697930049463}
+                              stroke="rgba(255,255,255,0.28)"
+                              strokeWidth={0.7}
+                            >
+                            <line>
+                            <line>
+                            <line
+                              x1={65.66267224101436}
++                             y1={19.260274915501306}
+-                             y1="19.260274915501302"
+                              x2={64.75469124153527}
++                             y2={21.042287963878042}
+-                             y2="21.04228796387804"
+                              stroke="rgba(255,255,255,0.28)"
+                              strokeWidth={0.7}
+                            >
+                            ...
+                            ...
+                        ...
+                  ...
+                    <div data-hero-content={true} className="mx-auto w-...">
+                      <div>
+                      <h1>
+                      <div className="mt-8 flex ...">
+                        <div>
+                        <div data-hero-rise={true} aria-hidden={true} className="hidden ite...">
+                          <div className="relative g...">
+                            <Gauge value={0} className="h-24 w-24" id="hero-gauge">
+                              <svg viewBox="0 0 100 100" className="overflow-v..." role="img" aria-label="0%">
+                                <defs>
+                                <path>
+                                <path>
+                                <line>
+                                <line>
+                                <line>
+                                <line
++                                 x1={22.08891369406431}
+-                                 x1="22.088913694064313"
+                                  y1={29.72140879590968}
++                                 x2={23.706947682814203}
+-                                 x2="23.706947682814207"
+                                  y2={30.89697930049463}
+                                  stroke="rgba(255,255,255,0.28)"
+                                  strokeWidth={0.7}
+                                >
+                                <line>
+                                <line>
+                                <line
+                                  x1={65.66267224101436}
++                                 y1={19.260274915501306}
+-                                 y1="19.260274915501302"
+                                  x2={64.75469124153527}
++                                 y2={21.042287963878042}
+-                                 y2="21.04228796387804"
+                                  stroke="rgba(255,255,255,0.28)"
+                                  strokeWidth={0.7}
+                                >
+                                ...
+                                ...
+                            ...
+                  ...
+              ...
+            ...
+ @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:3318
+[   11161ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:2477
+[   11164ms] [LOG] [Fast Refresh] done in 104ms @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:2477
+[   11506ms] [WARNING] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead. @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:2477
+[   37045ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:2477
+[   37125ms] [LOG] [Fast Refresh] done in 181ms @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:2477
+[   37227ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:2477
+[   37318ms] [LOG] [Fast Refresh] done in 176ms @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:2477
+[   37509ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:2477
+[   37954ms] [LOG] [Fast Refresh] done in 544ms @ http://localhost:3000/_next/static/chunks/1xcn_next_dist_1xno41f._.js:2477

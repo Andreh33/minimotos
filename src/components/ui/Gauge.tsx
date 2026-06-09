@@ -7,9 +7,12 @@ const R = 40;
 const START = 135;
 const SWEEP = 270;
 
+/** Redondeo estable para evitar hydration mismatch (server/cliente idénticos). */
+const r2 = (n: number) => Math.round(n * 100) / 100;
+
 function pt(r: number, deg: number): [number, number] {
   const a = (deg * Math.PI) / 180;
-  return [CX + r * Math.cos(a), CY + r * Math.sin(a)];
+  return [r2(CX + r * Math.cos(a)), r2(CY + r * Math.sin(a))];
 }
 
 function arcPath(r: number, startDeg: number, endDeg: number) {
