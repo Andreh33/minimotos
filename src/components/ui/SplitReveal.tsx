@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useEffect, type ElementType } from "react";
+import { useRef, useEffect, createElement, type ElementType } from "react";
 import { registerGsap, gsap, SplitText } from "@/lib/motion/gsap";
 import { cn } from "@/lib/utils/cn";
 
@@ -50,9 +50,5 @@ export function SplitReveal({
     };
   }, [text, start]);
 
-  return (
-    <Tag ref={ref as never} className={cn("opacity-0", className)}>
-      {text}
-    </Tag>
-  );
+  return createElement(Tag, { ref, className: cn("opacity-0", className) }, text);
 }

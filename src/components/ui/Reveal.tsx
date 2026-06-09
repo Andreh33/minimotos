@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useEffect, type ReactNode, type ElementType } from "react";
+import { useRef, useEffect, createElement, type ReactNode, type ElementType } from "react";
 import { registerGsap, gsap } from "@/lib/motion/gsap";
 
 /**
@@ -45,9 +45,5 @@ export function Reveal({
     return () => ctx.revert();
   }, [y, delay, stagger]);
 
-  return (
-    <Tag ref={ref as never} className={className}>
-      {children}
-    </Tag>
-  );
+  return createElement(Tag, { ref, className }, children);
 }
