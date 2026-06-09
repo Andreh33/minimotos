@@ -1,4 +1,5 @@
 import type { Categoria, Producto } from "./types";
+import { familyPhoto } from "@/lib/media";
 
 /**
  * DATOS DE DEMOSTRACIÓN — todos placeholder:true. NO son datos reales del cliente.
@@ -17,23 +18,8 @@ export const mockCategorias: Categoria[] = [
   { slug: "accesorios", nombre: "Accesorios", descripcion: "Los extras que marcan la diferencia.", imagen: null, orden: 8 },
 ];
 
-/**
- * Foto representativa por familia (royalty-free, Pexels). Ambiente/demostración,
- * NO foto del producto concreto. Reemplazar por fotos reales del cliente.
- */
-const famPhoto: Record<string, string> = {
-  minimotos: "/media/prod/minimotos.jpg",
-  "mini-quads": "/media/prod/mini-quads.jpg",
-  "pit-bikes": "/media/prod/pit-bikes.jpg",
-  buggies: "/media/prod/buggies.jpg",
-  electricas: "/media/prod/electricas.jpg",
-  equipacion: "/media/prod/equipacion.jpg",
-  recambios: "/media/prod/recambios.jpg",
-  accesorios: "/media/prod/accesorios.jpg",
-};
-
 function p(partial: Partial<Producto> & Pick<Producto, "slug" | "nombre" | "categoriaSlug" | "precio">): Producto {
-  const photo = famPhoto[partial.categoriaSlug];
+  const photo = familyPhoto[partial.categoriaSlug];
   return {
     id: partial.slug,
     marca: null,

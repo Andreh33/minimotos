@@ -44,7 +44,6 @@ export async function generateMetadata({
       siteName: site.name,
     },
     twitter: { card: "summary_large_image" },
-    icons: { icon: "/favicon.ico" },
   };
 }
 

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 import { Play, ArrowUpRight } from "lucide-react";
 import { SectionShell } from "@/components/ui/SectionShell";
@@ -5,11 +6,11 @@ import { Reveal } from "@/components/ui/Reveal";
 import { SplitReveal } from "@/components/ui/SplitReveal";
 import { site } from "@/lib/site";
 
-const tints = [
-  "rgba(255,30,142,0.20)",
-  "rgba(0,194,255,0.18)",
-  "rgba(122,43,255,0.18)",
-  "rgba(43,255,106,0.16)",
+const clips = [
+  "/media/prod/pit-bikes.jpg",
+  "/media/prod/electricas.jpg",
+  "/media/prod/buggies.jpg",
+  "/media/prod/minimotos.jpg",
 ];
 
 export async function TikTokFeed() {
@@ -42,7 +43,7 @@ export async function TikTokFeed() {
       </header>
 
       <Reveal stagger className="grid grid-cols-2 gap-3 md:grid-cols-4">
-        {tints.map((tint, i) => (
+        {clips.map((src, i) => (
           <a
             key={i}
             href={site.tiktok}
@@ -51,16 +52,26 @@ export async function TikTokFeed() {
             className="group relative flex aspect-[9/16] flex-col justify-end overflow-hidden rounded-mm-md border border-mm-line p-4"
             data-cursor="view"
           >
+            <div className="absolute inset-0 z-0 transition-transform duration-[var(--mm-dur-slow)] group-hover:scale-105">
+              <Image
+                src={src}
+                alt=""
+                fill
+                sizes="(max-width:768px) 50vw, 25vw"
+                className="object-cover brightness-[0.8] saturate-[0.8]"
+              />
+            </div>
             <div
-              className="absolute inset-0 -z-10 transition-transform duration-[var(--mm-dur-slow)] group-hover:scale-105"
-              style={{ background: `radial-gradient(110% 80% at 40% 25%, ${tint}, transparent 60%), #0F1117` }}
+              aria-hidden
+              className="absolute inset-0 z-[1]"
+              style={{ background: "linear-gradient(180deg, rgba(21,23,29,0.15), rgba(21,23,29,0.85))" }}
             />
-            <div className="absolute inset-0 grid place-items-center">
+            <div className="absolute inset-0 z-[2] grid place-items-center">
               <span className="grid h-12 w-12 place-items-center rounded-full border border-white/20 backdrop-blur-sm transition-transform group-hover:scale-110">
                 <Play className="ml-0.5 h-5 w-5" fill="currentColor" />
               </span>
             </div>
-            <span className="relative font-mono text-[0.6rem] uppercase tracking-widest text-mm-text-dim">
+            <span className="relative z-10 font-mono text-[0.6rem] uppercase tracking-widest text-mm-text">
               {site.tiktokHandle}
             </span>
           </a>

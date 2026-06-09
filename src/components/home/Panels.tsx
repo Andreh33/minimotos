@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 import { Gauge, Wrench, ShieldCheck, ArrowRight, type LucideIcon } from "lucide-react";
 import { Link } from "@/i18n/navigation";
@@ -10,14 +11,15 @@ type PanelDef = {
   key: "venta" | "taller" | "equipacion";
   icon: LucideIcon;
   href: string;
+  photo: string;
   tint: string;
   cta: string;
 };
 
 const PANELS: PanelDef[] = [
-  { key: "venta", icon: Gauge, href: "/tienda", tint: "rgba(30,123,255,0.22)", cta: "viewAll" },
-  { key: "taller", icon: Wrench, href: "/servicios", tint: "rgba(255,30,142,0.20)", cta: "viewMore" },
-  { key: "equipacion", icon: ShieldCheck, href: "/tienda", tint: "rgba(43,255,106,0.18)", cta: "viewMore" },
+  { key: "venta", icon: Gauge, href: "/tienda", photo: "/media/prod/minimotos.jpg", tint: "rgba(30,123,255,0.6)", cta: "viewAll" },
+  { key: "taller", icon: Wrench, href: "/servicios", photo: "/media/prod/recambios.jpg", tint: "rgba(255,30,142,0.55)", cta: "viewMore" },
+  { key: "equipacion", icon: ShieldCheck, href: "/tienda", photo: "/media/prod/equipacion.jpg", tint: "rgba(43,255,106,0.5)", cta: "viewMore" },
 ];
 
 export async function Panels() {
@@ -61,32 +63,37 @@ export async function Panels() {
                 </Reveal>
               </div>
 
-              {/* Visual branded */}
+              {/* Visual: foto tratada */}
               <Reveal className="[direction:ltr]">
-                <div className="relative aspect-[5/4] overflow-hidden rounded-mm-md border border-mm-line">
+                <div className="group relative aspect-[5/4] overflow-hidden rounded-mm-md border border-mm-line">
+                  <Image
+                    src={panel.photo}
+                    alt=""
+                    fill
+                    sizes="(max-width:768px) 100vw, 50vw"
+                    className="object-cover brightness-[0.82] saturate-[0.8] transition-transform duration-[var(--mm-dur-slow)] ease-[var(--ease-power)] group-hover:scale-105"
+                  />
                   <div
+                    aria-hidden
                     className="absolute inset-0"
                     style={{
-                      background: `radial-gradient(110% 90% at 70% 20%, ${panel.tint}, transparent 60%), #0F1117`,
+                      background: "linear-gradient(180deg, rgba(21,23,29,0.2), rgba(21,23,29,0.75))",
                     }}
                   />
                   <div
                     aria-hidden
-                    className="absolute inset-0 opacity-40"
-                    style={{
-                      backgroundImage:
-                        "repeating-linear-gradient(115deg, rgba(255,255,255,0.025) 0 1px, transparent 1px 28px)",
-                    }}
+                    className="absolute inset-0 mix-blend-color opacity-25"
+                    style={{ background: `radial-gradient(120% 100% at 70% 10%, ${panel.tint}, transparent 60%)` }}
                   />
                   <span
                     aria-hidden
-                    className="mm-display absolute -right-2 bottom-0 select-none text-[12rem] leading-none text-white/[0.04]"
+                    className="mm-display absolute -right-1 bottom-0 select-none text-[12rem] leading-none text-white/[0.08]"
                   >
                     0{i + 1}
                   </span>
-                  <div className="absolute inset-0 grid place-items-center">
-                    <Icon className="h-20 w-20 text-mm-text-dim" strokeWidth={1} />
-                  </div>
+                  <span className="absolute left-5 top-5 grid h-11 w-11 place-items-center rounded-full border border-white/15 bg-mm-black/40 backdrop-blur-md">
+                    <Icon className="h-5 w-5 text-mm-text" strokeWidth={1.5} />
+                  </span>
                 </div>
               </Reveal>
             </div>
