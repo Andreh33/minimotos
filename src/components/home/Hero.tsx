@@ -13,7 +13,13 @@ import { waLink, site } from "@/lib/site";
 export function Hero() {
   const t = useTranslations("hero");
   const [rpm, setRpm] = useState(0);
+  const [showVideo, setShowVideo] = useState(false);
   const root = useRef<HTMLElement>(null);
+
+  // Vídeo solo en pantallas grandes (móvil se queda con la foto, más ligero)
+  useEffect(() => {
+    setShowVideo(window.matchMedia("(min-width: 768px)").matches);
+  }, []);
 
   useEffect(() => {
     registerGsap();
@@ -66,7 +72,21 @@ export function Hero() {
           sizes="100vw"
           className="object-cover object-[center_35%] saturate-[0.6] brightness-105 contrast-105"
         />
-        {/* Duotono espectro suave sobre la foto */}
+        {/* Vídeo ambiente (desktop) sobre la foto */}
+        {showVideo && (
+          <video
+            className="absolute inset-0 h-full w-full object-cover object-center saturate-[0.7] brightness-105"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            poster="/media/hero-bike-v2.jpg"
+          >
+            <source src="/media/hero.mp4" type="video/mp4" />
+          </video>
+        )}
+        {/* Duotono espectro suave sobre la foto/vídeo */}
         <div
           className="absolute inset-0 mix-blend-color opacity-30"
           style={{ background: "linear-gradient(120deg, #1E7BFF, #7A2BFF 60%, #FF1E8E)" }}
