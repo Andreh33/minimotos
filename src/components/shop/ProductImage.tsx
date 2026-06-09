@@ -27,14 +27,26 @@ export function ProductImage({
 
   if (img?.url) {
     return (
-      <Image
-        src={img.url}
-        alt={img.alt || producto.nombre}
-        fill
-        sizes={sizes}
-        priority={priority}
-        className={cn("object-cover", className)}
-      />
+      <>
+        <Image
+          src={img.url}
+          alt={img.alt || producto.nombre}
+          fill
+          sizes={sizes}
+          priority={priority}
+          className={cn("object-cover brightness-[0.92] contrast-[1.05] saturate-[0.9]", className)}
+        />
+        {/* Tratamiento de marca: grounding + tinte sutil para cohesión con el tema */}
+        <span
+          aria-hidden
+          className="pointer-events-none absolute inset-0 bg-gradient-to-t from-mm-ink-900/80 via-mm-ink-900/5 to-mm-ink-900/15"
+        />
+        <span
+          aria-hidden
+          className="pointer-events-none absolute inset-0 opacity-[0.14] mix-blend-color"
+          style={{ background: "linear-gradient(125deg, #1E7BFF, #7A2BFF 55%, #FF1E8E)" }}
+        />
+      </>
     );
   }
 

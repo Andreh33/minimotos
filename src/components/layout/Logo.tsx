@@ -1,9 +1,9 @@
 import { cn } from "@/lib/utils/cn";
 
 /**
- * Marca placeholder (anillo de espectro + wordmark cromo/arcoíris).
- * TODO:DATO-REAL — sustituir el anillo por el logo real del cliente cuando lo pase
- * (navbar, preloader, footer, favicon, OG).
+ * Wordmark Mini Motos — bold racing, con barra de velocidad en espectro.
+ * Limpio y confiado (estilo bold condensado). TODO:DATO-REAL — sustituir por el
+ * logo definitivo del cliente cuando lo pase (navbar, preloader, footer, favicon, OG).
  */
 export function Logo({
   className,
@@ -12,27 +12,17 @@ export function Logo({
   className?: string;
   withText?: boolean;
 }) {
-  const ringMask =
-    "radial-gradient(circle, transparent 50%, #000 52%)";
   return (
-    <span className={cn("inline-flex items-center gap-2.5", className)} aria-label="Mini Motos">
-      <span className="relative grid h-7 w-7 shrink-0 place-items-center">
-        <span
-          aria-hidden
-          className="absolute inset-0 rounded-full mm-spectrum-ring"
-          style={{ mask: ringMask, WebkitMask: ringMask }}
-        />
-        <span aria-hidden className="absolute inset-[30%] rounded-full bg-mm-black" />
-        <span
-          aria-hidden
-          className="absolute left-1/2 top-1/2 h-[42%] w-[1.5px] origin-bottom -translate-x-1/2 -translate-y-full rounded-full bg-mm-danger"
-          style={{ transform: "translate(-50%,-100%) rotate(38deg)" }}
-        />
-      </span>
+    <span className={cn("inline-flex items-center gap-2", className)} aria-label="Mini Motos">
+      {/* Barra de velocidad (espectro), ladeada */}
+      <span
+        aria-hidden
+        className="block h-5 w-[6px] -skew-x-[18deg] rounded-[1px]"
+        style={{ background: "var(--mm-spectrum)", boxShadow: "0 0 12px rgba(30,123,255,0.55)" }}
+      />
       {withText && (
-        <span className="mm-display text-lg leading-none tracking-tight">
-          <span className="mm-text-chrome">Mini</span>
-          <span className="mm-text-spectrum">motos</span>
+        <span className="mm-display text-[1.15rem] font-bold uppercase leading-none tracking-[-0.02em] text-mm-text">
+          Mini<span className="text-mm-text-dim">motos</span>
         </span>
       )}
     </span>

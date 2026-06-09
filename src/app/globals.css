@@ -305,6 +305,15 @@
   .mm-spectrum-ring {
     background: var(--mm-spectrum-conic);
   }
+
+  /* Glow neón para titulares (drop-shadow funciona sobre texto con gradiente) */
+  .mm-glow-spectrum {
+    filter: drop-shadow(0 0 26px rgba(122, 43, 255, 0.5))
+      drop-shadow(0 0 10px rgba(255, 30, 142, 0.4));
+  }
+  .mm-glow-chrome {
+    filter: drop-shadow(0 0 22px rgba(180, 200, 230, 0.28));
+  }
 }
 
 /* ============================================================

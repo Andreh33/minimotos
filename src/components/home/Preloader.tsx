@@ -2,15 +2,15 @@
 
 import { useEffect, useRef, useState } from "react";
 import { registerGsap, gsap } from "@/lib/motion/gsap";
-import { Gauge } from "@/components/ui/Gauge";
 import { Logo } from "@/components/layout/Logo";
 
 type Lenis = { stop?: () => void; start?: () => void };
 
 export function Preloader() {
   const [done, setDone] = useState(false);
-  const [rpm, setRpm] = useState(0);
+  const [pct, setPct] = useState(0);
   const root = useRef<HTMLDivElement>(null);
+  const bar = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (sessionStorage.getItem("mm-preloaded")) {
@@ -32,8 +32,15 @@ export function Preloader() {
       },
     });
 
-    tl.to(o, { v: 0.95, duration: 1.1, ease: "power2.inOut", onUpdate: () => setRpm(o.v) })
-      .to(root.current, { yPercent: -100, skewY: -3, duration: 0.8, ease: "expo.inOut" }, "+=0.15");
+    tl.to(o, {
+      v: 1,
+      duration: 1.1,
+      ease: "power2.inOut",
+      onUpdate: () => {
+        setPct(Math.round(o.v * 100));
+        if (bar.current) bar.current.style.transform = `scaleX(${o.v})`;
+      },
+    }).to(root.current, { yPercent: -100, skewY: -3, duration: 0.8, ease: "expo.inOut" }, "+=0.15");
 
     return () => {
       document.documentElement.style.overflow = "";
@@ -48,12 +55,19 @@ export function Preloader() {
       ref={root}
       className="fixed inset-0 z-[100] flex flex-col items-center justify-center gap-8 bg-mm-black"
     >
-      <Logo className="scale-125" />
-      <div className="relative grid h-28 w-28 place-items-center">
-        <Gauge value={rpm} className="h-28 w-28" id="preload-gauge" />
-        <span className="tnum absolute text-sm text-mm-text-dim">
-          {String(Math.round(rpm * 100)).padStart(3, "0")}
-        </span>
+      <Logo className="scale-150" />
+      <div className="w-60 max-w-[60vw]">
+        <div className="h-[2px] w-full overflow-hidden rounded-full bg-white/10">
+          <div
+            ref={bar}
+            className="h-full w-full origin-left scale-x-0"
+            style={{ background: "var(--mm-spectrum)", boxShadow: "0 0 10px rgba(30,123,255,0.6)" }}
+          />
+        </div>
+        <div className="mt-3 flex justify-between font-mono text-[0.6rem] uppercase tracking-widest text-mm-text-mute">
+          <span>Cargando</span>
+          <span className="tnum">{String(pct).padStart(3, "0")}</span>
+        </div>
       </div>
     </div>
   );

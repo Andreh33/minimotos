@@ -11,6 +11,7 @@ import { TikTokFeed } from "@/components/home/TikTokFeed";
 import { Testimonials } from "@/components/home/Testimonials";
 import { Location } from "@/components/home/Location";
 import { Newsletter } from "@/components/home/Newsletter";
+import { NeonDivider } from "@/components/ui/NeonDivider";
 
 export default async function HomePage({
   params,
@@ -29,9 +30,11 @@ export default async function HomePage({
       <Families />
       <Featured />
       <Panels />
+      <NeonDivider variant="spectrum" />
       <Signature productos={destacados} />
       <TikTokFeed />
       <Testimonials />
+      <NeonDivider variant="magenta" angle={1.5} />
       <Location />
       <Newsletter />
     </>
