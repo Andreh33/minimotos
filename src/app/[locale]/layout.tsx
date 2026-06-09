@@ -5,6 +5,8 @@ import { setRequestLocale, getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { fontVariables } from "@/lib/fonts";
 import { SmoothScroll } from "@/lib/motion/SmoothScroll";
+import { SiteChrome } from "@/components/layout/SiteChrome";
+import { Footer } from "@/components/layout/Footer";
 import { site } from "@/lib/site";
 import "../globals.css";
 
@@ -66,7 +68,11 @@ export default async function LocaleLayout({
           >
             {locale === "es" ? "Saltar al contenido" : "Skip to content"}
           </a>
-          <SmoothScroll>{children}</SmoothScroll>
+          <SmoothScroll>
+            <SiteChrome />
+            {children}
+            <Footer />
+          </SmoothScroll>
         </NextIntlClientProvider>
       </body>
     </html>
