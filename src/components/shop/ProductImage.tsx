@@ -18,7 +18,7 @@ export function ProductImage({
   sizes = "(max-width:768px) 50vw, 25vw",
   priority,
 }: {
-  producto: Producto;
+  producto: Pick<Producto, "imagenes" | "tipoEnergia" | "placeholder" | "nombre">;
   className?: string;
   sizes?: string;
   priority?: boolean;

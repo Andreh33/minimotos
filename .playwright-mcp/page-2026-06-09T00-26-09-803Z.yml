@@ -1,0 +1,200 @@
+- generic [active] [ref=e1]:
+  - link "Saltar al contenido" [ref=e2] [cursor=pointer]:
+    - /url: "#contenido"
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link "Mini Motos — inicio" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - generic "Mini Motos" [ref=e6]:
+          - generic [ref=e11]: Minimotos
+      - navigation [ref=e12]:
+        - button "Familias" [ref=e13]
+        - link "Tienda" [ref=e14] [cursor=pointer]:
+          - /url: /tienda
+        - link "Taller" [ref=e15] [cursor=pointer]:
+          - /url: /servicios
+        - link "Nosotros" [ref=e16] [cursor=pointer]:
+          - /url: /nosotros
+        - link "Contacto" [ref=e17] [cursor=pointer]:
+          - /url: /contacto
+      - generic [ref=e18]:
+        - button "Switch language to EN" [ref=e19]: es/en
+        - button "Carrito" [ref=e20]:
+          - img [ref=e21]
+    - generic [ref=e25]:
+      - link "Minimotos" [ref=e26] [cursor=pointer]:
+        - /url: /tienda?family=minimotos
+        - generic [ref=e27]: Minimotos
+      - link "Mini Quads gasolina · eléctrica" [ref=e28] [cursor=pointer]:
+        - /url: /tienda?family=mini-quads
+        - generic [ref=e29]: Mini Quads
+        - generic [ref=e30]: gasolina · eléctrica
+      - link "Pit Bikes" [ref=e31] [cursor=pointer]:
+        - /url: /tienda?family=pit-bikes
+        - generic [ref=e32]: Pit Bikes
+      - link "Buggies gasolina · eléctrica" [ref=e33] [cursor=pointer]:
+        - /url: /tienda?family=buggies
+        - generic [ref=e34]: Buggies
+        - generic [ref=e35]: gasolina · eléctrica
+      - link "Eléctricas" [ref=e36] [cursor=pointer]:
+        - /url: /tienda?family=electricas
+        - generic [ref=e37]: Eléctricas
+      - link "Equipación" [ref=e38] [cursor=pointer]:
+        - /url: /tienda?family=equipacion
+        - generic [ref=e39]: Equipación
+      - link "Recambios" [ref=e40] [cursor=pointer]:
+        - /url: /tienda?family=recambios
+        - generic [ref=e41]: Recambios
+      - link "Accesorios" [ref=e42] [cursor=pointer]:
+        - /url: /tienda?family=accesorios
+        - generic [ref=e43]: Accesorios
+  - generic:
+    - dialog:
+      - banner:
+        - heading [level=2]: Tu carrito
+        - button:
+          - img
+      - generic:
+        - paragraph: El carrito está vacío
+        - link:
+          - /url: /tienda
+          - text: Ir a la tienda
+  - generic:
+    - generic:
+      - img "0%"
+      - generic: "00"
+  - main [ref=e44]:
+    - generic [ref=e45]:
+      - navigation [ref=e46]:
+        - link "Tienda" [ref=e47] [cursor=pointer]:
+          - /url: /tienda
+        - img [ref=e48]
+        - generic [ref=e50]: Minimoto GP 50 · DEMO
+      - generic [ref=e51]:
+        - generic [ref=e52]:
+          - generic [ref=e53]:
+            - generic [ref=e55]: MM
+            - generic [ref=e56]: demo
+          - generic [ref=e57]:
+            - generic [ref=e58]: "-15%"
+            - generic [ref=e59]: Gasolina
+        - generic [ref=e60]:
+          - generic [ref=e61]:
+            - heading "Minimoto GP 50 · DEMO" [level=1] [ref=e62]
+            - paragraph [ref=e63]: Contenido de demostración — pendiente de datos reales
+          - generic [ref=e64]:
+            - generic [ref=e65]:
+              - generic [ref=e66]: 469 €
+              - generic [ref=e67]: 549 €
+            - link "Consultar por WhatsApp" [ref=e68] [cursor=pointer]:
+              - /url: https://wa.me/34000000000?text=%C2%A1Hola%20Mini%20Motos!%20Me%20interesa%3A%20Minimoto%20GP%2050%20%C2%B7%20DEMO%20(469%C2%A0%E2%82%AC).%20%C2%BFDisponibilidad%2C%20financiaci%C3%B3n%20y%20recogida%3F
+              - img [ref=e69]
+              - text: Consultar por WhatsApp
+            - paragraph [ref=e71]: "Vehículo: consulta financiación, recogida y matriculación por WhatsApp."
+            - paragraph [ref=e72]: Recogida en tienda disponible
+          - paragraph [ref=e73]: Producto de demostración. Ficha pendiente de datos reales del cliente.
+          - generic [ref=e74]:
+            - heading "Ficha técnica" [level=2] [ref=e75]
+            - generic [ref=e76]:
+              - generic [ref=e77]:
+                - term [ref=e78]: Cilindrada
+                - definition [ref=e79]: 50 cc
+              - generic [ref=e80]:
+                - term [ref=e81]: Vel. máx
+                - definition [ref=e82]: 60 km/h
+              - generic [ref=e83]:
+                - term [ref=e84]: Edad mín.
+                - definition [ref=e85]: "+8"
+    - generic [ref=e87]:
+      - heading "También te puede gustar" [level=2] [ref=e88]
+      - article [ref=e90]:
+        - link "Nuevo Gasolina" [ref=e91] [cursor=pointer]:
+          - /url: /tienda/minimoto-cross-49-demo
+          - generic [ref=e93]:
+            - generic [ref=e95]: MM
+            - generic [ref=e96]: demo
+          - generic [ref=e98]: Nuevo
+          - generic [ref=e100]: Gasolina
+        - generic [ref=e101]:
+          - link "Minimoto Cross 49 · DEMO" [ref=e102] [cursor=pointer]:
+            - /url: /tienda/minimoto-cross-49-demo
+            - heading "Minimoto Cross 49 · DEMO" [level=3] [ref=e103]
+          - paragraph [ref=e104]: 49cc · 50 km/h · +7
+          - generic [ref=e105]:
+            - generic [ref=e107]: 399 €
+            - link "Consultar por WhatsApp" [ref=e108] [cursor=pointer]:
+              - /url: https://wa.me/34000000000?text=%C2%A1Hola%20Mini%20Motos!%20Me%20interesa%3A%20Minimoto%20Cross%2049%20%C2%B7%20DEMO.%20%C2%BFDisponibilidad%2C%20financiaci%C3%B3n%20y%20recogida%3F
+              - img [ref=e109]
+  - contentinfo [ref=e111]:
+    - generic:
+      - generic:
+        - generic:
+          - generic:
+            - generic: MINI MOTOS ✦ CIUDAD REAL ✦
+            - generic: MINI MOTOS ✦ CIUDAD REAL ✦
+            - generic: MINI MOTOS ✦ CIUDAD REAL ✦
+            - generic: MINI MOTOS ✦ CIUDAD REAL ✦
+          - generic:
+            - generic: MINI MOTOS ✦ CIUDAD REAL ✦
+            - generic: MINI MOTOS ✦ CIUDAD REAL ✦
+            - generic: MINI MOTOS ✦ CIUDAD REAL ✦
+            - generic: MINI MOTOS ✦ CIUDAD REAL ✦
+    - generic [ref=e112]:
+      - generic [ref=e113]:
+        - generic "Mini Motos" [ref=e114]:
+          - generic [ref=e119]: Minimotos
+        - paragraph [ref=e120]: Venta y taller de minimotos en Ciudad Real.
+        - paragraph [ref=e121]: Avenida de Valdepeñas, 13004 Ciudad Real
+      - generic [ref=e122]:
+        - heading "Explora" [level=3] [ref=e123]
+        - list [ref=e124]:
+          - listitem [ref=e125]:
+            - link "Tienda" [ref=e126] [cursor=pointer]:
+              - /url: /tienda
+          - listitem [ref=e127]:
+            - link "Taller" [ref=e128] [cursor=pointer]:
+              - /url: /servicios
+          - listitem [ref=e129]:
+            - link "Nosotros" [ref=e130] [cursor=pointer]:
+              - /url: /nosotros
+          - listitem [ref=e131]:
+            - link "Contacto" [ref=e132] [cursor=pointer]:
+              - /url: /contacto
+      - generic [ref=e133]:
+        - heading "Legal" [level=3] [ref=e134]
+        - list [ref=e135]:
+          - listitem [ref=e136]:
+            - link "Aviso legal" [ref=e137] [cursor=pointer]:
+              - /url: /aviso-legal
+          - listitem [ref=e138]:
+            - link "Privacidad" [ref=e139] [cursor=pointer]:
+              - /url: /privacidad
+          - listitem [ref=e140]:
+            - link "Cookies" [ref=e141] [cursor=pointer]:
+              - /url: /cookies
+          - listitem [ref=e142]:
+            - link "Devoluciones" [ref=e143] [cursor=pointer]:
+              - /url: /devoluciones
+      - generic [ref=e144]:
+        - heading "Contacto" [level=3] [ref=e145]
+        - list [ref=e146]:
+          - listitem [ref=e147]:
+            - link "minimotos26@icloud.com" [ref=e148] [cursor=pointer]:
+              - /url: mailto:minimotos26@icloud.com
+          - listitem [ref=e149]:
+            - link "@minimotos_ciudadreal" [ref=e150] [cursor=pointer]:
+              - /url: https://www.tiktok.com/@minimotos_ciudadreal
+        - generic [ref=e151]:
+          - link "Minimotos" [ref=e152] [cursor=pointer]:
+            - /url: /tienda?family=minimotos
+          - link "Mini Quads" [ref=e153] [cursor=pointer]:
+            - /url: /tienda?family=mini-quads
+          - link "Pit Bikes" [ref=e154] [cursor=pointer]:
+            - /url: /tienda?family=pit-bikes
+          - link "Buggies" [ref=e155] [cursor=pointer]:
+            - /url: /tienda?family=buggies
+    - generic [ref=e156]:
+      - paragraph [ref=e157]: © Mini Motos. Todos los derechos reservados.
+      - paragraph [ref=e158]: Hecho en Ciudad Real
+  - button "Open Next.js Dev Tools" [ref=e164] [cursor=pointer]:
+    - img [ref=e165]
