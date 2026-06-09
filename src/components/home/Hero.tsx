@@ -1,29 +1,19 @@
 "use client";
 
-import dynamic from "next/dynamic";
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { ArrowDown } from "lucide-react";
-import { hasWebGL } from "@/lib/utils/capabilities";
 import { ButtonLink } from "@/components/ui/Button";
 import { Magnetic } from "@/components/ui/Magnetic";
 import { Gauge } from "@/components/ui/Gauge";
 import { registerGsap, gsap } from "@/lib/motion/gsap";
 import { waLink, site } from "@/lib/site";
 
-const HeroCanvas = dynamic(() => import("@/components/webgl/HeroCanvas"), {
-  ssr: false,
-});
-
 export function Hero() {
   const t = useTranslations("hero");
-  const [webgl, setWebgl] = useState(false);
   const [rpm, setRpm] = useState(0);
   const root = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    setWebgl(hasWebGL());
-  }, []);
 
   useEffect(() => {
     registerGsap();
@@ -66,25 +56,58 @@ export function Hero() {
       id="contenido"
       className="relative flex min-h-[100svh] flex-col justify-end overflow-hidden"
     >
-      {/* Fondo */}
-      <div className="absolute inset-0 -z-10">
-        {webgl ? (
-          <HeroCanvas />
-        ) : (
-          <div
-            className="absolute inset-0"
-            style={{
-              background:
-                "radial-gradient(120% 80% at 30% 35%, rgba(30,123,255,0.25), transparent 60%), radial-gradient(100% 70% at 75% 60%, rgba(255,30,142,0.18), transparent 55%), #050507",
-            }}
-          />
-        )}
-        <div className="absolute inset-0 bg-gradient-to-t from-mm-black via-mm-black/30 to-transparent" />
+      {/* Fondo: foto ambiente + grafito + glow neón + patrón */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <Image
+          src="/media/hero-bike-v2.jpg"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-[center_35%] saturate-[0.6] brightness-105 contrast-105"
+        />
+        {/* Duotono espectro suave sobre la foto */}
+        <div
+          className="absolute inset-0 mix-blend-color opacity-30"
+          style={{ background: "linear-gradient(120deg, #1E7BFF, #7A2BFF 60%, #FF1E8E)" }}
+        />
+        {/* Oscurecido para legibilidad — suave, deja ver la foto */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(180deg, rgba(21,23,29,0.18) 0%, rgba(21,23,29,0.02) 30%, rgba(21,23,29,0.5) 78%, rgba(21,23,29,0.9) 100%)",
+          }}
+        />
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(90deg, rgba(21,23,29,0.92) 0%, rgba(21,23,29,0.28) 44%, rgba(21,23,29,0) 74%)",
+          }}
+        />
+        {/* Glow neón espectro sobre la foto (screen) */}
+        <div
+          className="absolute inset-0 mix-blend-screen"
+          style={{
+            background:
+              "radial-gradient(60% 50% at 78% 12%, rgba(30,123,255,0.45), transparent 60%), radial-gradient(55% 45% at 90% 78%, rgba(255,30,142,0.35), transparent 60%), radial-gradient(50% 40% at 8% 30%, rgba(122,43,255,0.30), transparent 60%)",
+          }}
+        />
+        {/* Patrón diagonal */}
+        <div
+          aria-hidden
+          className="absolute inset-0 opacity-50"
+          style={{
+            backgroundImage:
+              "repeating-linear-gradient(115deg, rgba(255,255,255,0.03) 0 1px, transparent 1px 26px)",
+          }}
+        />
       </div>
 
       <div
         data-hero-content
-        className="mx-auto w-full max-w-[1400px] px-6 pb-20 pt-32 md:px-12 md:pb-28"
+        className="relative z-10 mx-auto w-full max-w-[1400px] px-6 pb-20 pt-32 md:px-12 md:pb-28"
       >
         <div className="overflow-hidden">
           <p data-hero-rise className="mm-eyebrow mb-6 text-mm-cyan">
@@ -147,7 +170,7 @@ export function Hero() {
       </div>
 
       {/* Indicador scroll */}
-      <div className="pointer-events-none absolute bottom-6 left-1/2 flex -translate-x-1/2 flex-col items-center gap-2">
+      <div className="pointer-events-none absolute bottom-6 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-2">
         <span className="font-mono text-[0.6rem] uppercase tracking-[0.3em] text-mm-text-mute">
           scroll
         </span>

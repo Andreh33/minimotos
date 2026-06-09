@@ -6,12 +6,12 @@
    ============================================================ */
 
 @theme {
-  /* ---- Tintas / fondos ---- */
-  --color-mm-black: #050507;
-  --color-mm-ink-900: #0a0b10;
-  --color-mm-ink-800: #0f1117;
-  --color-mm-ink-700: #161922;
-  --color-mm-ink-600: #1e2330;
+  /* ---- Tintas / fondos (grafito, no negro puro) ---- */
+  --color-mm-black: #15171d;
+  --color-mm-ink-900: #1a1d24;
+  --color-mm-ink-800: #20242d;
+  --color-mm-ink-700: #272c37;
+  --color-mm-ink-600: #323845;
 
   /* ---- Espectro neón (la firma; usar con freno) ---- */
   --color-mm-cyan: #00c2ff;
@@ -138,7 +138,6 @@
   }
 
   body {
-    background: var(--color-mm-black);
     color: var(--color-mm-text);
     font-family: var(--font-body);
     font-size: var(--fs-body);
@@ -146,6 +145,28 @@
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
     overflow-x: clip;
+    /* Grafito con elevación sutil + tinte de espectro, en vez de negro plano */
+    background-color: var(--color-mm-black);
+    background-image:
+      radial-gradient(120% 80% at 80% -10%, rgba(30, 123, 255, 0.06), transparent 55%),
+      radial-gradient(100% 70% at 0% 110%, rgba(255, 30, 142, 0.05), transparent 55%),
+      linear-gradient(180deg, #1b1e26 0%, var(--color-mm-black) 60%);
+    background-attachment: fixed;
+  }
+
+  /* Patrón global sutil (rejilla técnica) sobre el grafito */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.022) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.022) 1px, transparent 1px);
+    background-size: 48px 48px;
+    mask-image: radial-gradient(120% 100% at 50% 0%, #000 55%, transparent 100%);
+    -webkit-mask-image: radial-gradient(120% 100% at 50% 0%, #000 55%, transparent 100%);
   }
 
   /* Lenis */
