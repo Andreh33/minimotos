@@ -1,26 +1,281 @@
 @import "tailwindcss";
 
+/* ============================================================
+   MINI MOTOS · Design tokens (§3 del prompt maestro)
+   Negro profundo · espectro neón · cromo · velocidad
+   ============================================================ */
+
+@theme {
+  /* ---- Tintas / fondos ---- */
+  --color-mm-black: #050507;
+  --color-mm-ink-900: #0a0b10;
+  --color-mm-ink-800: #0f1117;
+  --color-mm-ink-700: #161922;
+  --color-mm-ink-600: #1e2330;
+
+  /* ---- Espectro neón (la firma; usar con freno) ---- */
+  --color-mm-cyan: #00c2ff;
+  --color-mm-blue: #1e7bff;
+  --color-mm-violet: #7a2bff;
+  --color-mm-magenta: #ff1e8e;
+  --color-mm-amber: #ffc400;
+  --color-mm-green: #2bff6a;
+  --color-mm-lime: #c6ff1a;
+
+  /* ---- Cromados / metal ---- */
+  --color-mm-chrome-1: #eaf1f8;
+  --color-mm-chrome-2: #b7c2cf;
+  --color-mm-chrome-3: #6e7888;
+
+  /* ---- Texto ---- */
+  --color-mm-text: #f2f5f9;
+  --color-mm-text-dim: #9aa3b2;
+  --color-mm-text-mute: #5c6573;
+
+  /* ---- Funcionales ---- */
+  --color-mm-ok: #2bff6a;
+  --color-mm-danger: #ff3b57;
+  --color-mm-warn: #ffc400;
+
+  /* ---- Tipografía ---- */
+  --font-display: var(--font-clash), "Arial Narrow", system-ui, sans-serif;
+  --font-body: var(--font-geist), system-ui, -apple-system, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, "SFMono-Regular", monospace;
+
+  /* ---- Radios ---- */
+  --radius-mm-xs: 4px;
+  --radius-mm-sm: 8px;
+  --radius-mm-md: 12px;
+  --radius-mm-pill: 999px;
+
+  /* ---- Easings ---- */
+  --ease-power: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-snap: cubic-bezier(0.7, 0, 0.2, 1);
+
+  /* ---- Breakpoints extra ---- */
+  --breakpoint-xs: 24rem;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --mm-line: rgba(255, 255, 255, 0.08);
+  --mm-line-strong: rgba(255, 255, 255, 0.14);
+
+  /* gradiente del anillo */
+  --mm-spectrum: linear-gradient(
+    100deg,
+    #00c2ff 0%,
+    #1e7bff 22%,
+    #7a2bff 44%,
+    #ff1e8e 64%,
+    #ffc400 82%,
+    #2bff6a 100%
+  );
+  --mm-spectrum-conic: conic-gradient(
+    from 210deg,
+    #00c2ff,
+    #1e7bff,
+    #7a2bff,
+    #ff1e8e,
+    #ffc400,
+    #2bff6a,
+    #00c2ff
+  );
+
+  /* cromo */
+  --mm-chrome: linear-gradient(
+    180deg,
+    #eaf1f8 0%,
+    #b7c2cf 46%,
+    #6e7888 54%,
+    #c3cdd9 100%
+  );
+
+  /* glow */
+  --mm-glow-blue: 0 0 28px rgba(30, 123, 255, 0.45);
+  --mm-glow-magenta: 0 0 28px rgba(255, 30, 142, 0.4);
+  --mm-glow-green: 0 0 28px rgba(43, 255, 106, 0.4);
+  --mm-glow-cyan: 0 0 28px rgba(0, 194, 255, 0.4);
+
+  /* geometría ladeada */
+  --mm-skew: -6deg;
+  --mm-slant: 3.5deg;
+  --mm-tilt: 6deg;
+
+  /* motion */
+  --mm-dur-fast: 220ms;
+  --mm-dur: 420ms;
+  --mm-dur-slow: 900ms;
+  --mm-lenis-lerp: 0.085;
+
+  /* escala fluida */
+  --fs-hero: clamp(3.25rem, 9vw, 11rem);
+  --fs-h1: clamp(2.5rem, 6vw, 6rem);
+  --fs-h2: clamp(2rem, 4.5vw, 4.5rem);
+  --fs-h3: clamp(1.5rem, 2.5vw, 2.5rem);
+  --fs-body: clamp(1rem, 1.1vw, 1.125rem);
+  --fs-small: 0.875rem;
+  --fs-cap: 0.75rem;
+
+  color-scheme: dark;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+/* ============================================================
+   Base
+   ============================================================ */
+@layer base {
+  * {
+    border-color: var(--mm-line);
+    min-width: 0;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  html {
+    background: var(--color-mm-black);
+    -webkit-text-size-adjust: 100%;
+    scrollbar-width: none;
+  }
+  html::-webkit-scrollbar {
+    display: none;
+  }
+
+  body {
+    background: var(--color-mm-black);
+    color: var(--color-mm-text);
+    font-family: var(--font-body);
+    font-size: var(--fs-body);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: clip;
+  }
+
+  /* Lenis */
+  html.lenis,
+  html.lenis body {
+    height: auto;
+  }
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+  .lenis.lenis-stopped {
+    overflow: clip;
+  }
+
+  ::selection {
+    background: var(--color-mm-magenta);
+    color: #fff;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    line-height: 0.92;
+    letter-spacing: -0.01em;
+  }
+
+  /* Foco visible neón en TODO interactivo */
+  :where(a, button, input, select, textarea, [tabindex]):focus-visible {
+    outline: 2px solid var(--color-mm-cyan);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  /* números técnicos en mono donde marquemos */
+  .tnum {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum" 1;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* ============================================================
+   Sistema "ladeado" + firma de marca
+   ============================================================ */
+@layer components {
+  .mm-eyebrow {
+    font-family: var(--font-mono);
+    font-size: var(--fs-cap);
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--color-mm-text-dim);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em;
+    transform: rotate(-2deg);
+  }
+
+  .mm-text-spectrum {
+    background: var(--mm-spectrum);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .mm-text-chrome {
+    background: var(--mm-chrome);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 1px 0 rgba(0, 0, 0, 0.5));
+  }
+
+  .mm-display {
+    font-family: var(--font-display);
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 0.88;
+    letter-spacing: -0.015em;
+  }
+  .mm-display-skew {
+    transform: skewX(var(--mm-skew));
+  }
+
+  .mm-edge {
+    border: 1px solid var(--mm-line-strong);
+  }
+
+  .mm-surface {
+    background: color-mix(in oklab, var(--color-mm-ink-700) 92%, transparent);
+    border: 1px solid var(--mm-line);
+    border-radius: var(--radius-mm-md);
+  }
+
+  .mm-rule {
+    height: 1px;
+    width: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      var(--mm-line-strong) 18%,
+      var(--mm-line-strong) 82%,
+      transparent
+    );
+  }
+
+  .mm-spectrum-ring {
+    background: var(--mm-spectrum-conic);
+  }
+}
+
+/* ============================================================
+   Keyframes
+   ============================================================ */
+@keyframes mm-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@keyframes mm-spin-slow {
+  to { transform: rotate(360deg); }
+}
+@keyframes mm-pulse-glow {
+  0%, 100% { opacity: 0.55; }
+  50% { opacity: 1; }
+}
+@keyframes mm-rise {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
 }

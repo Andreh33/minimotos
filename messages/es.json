@@ -1,0 +1,171 @@
+{
+  "meta": {
+    "title": "Mini Motos · Ciudad Real — Minimotos, quads, pit bikes y buggies",
+    "description": "Venta y taller de minimotos, mini quads, pit bikes y buggies en Ciudad Real. Gasolina y eléctricas, equipación cross y recambios."
+  },
+  "nav": {
+    "shop": "Tienda",
+    "services": "Taller",
+    "about": "Nosotros",
+    "contact": "Contacto",
+    "cart": "Carrito",
+    "menu": "Menú",
+    "close": "Cerrar",
+    "families": "Familias",
+    "openMenu": "Abrir menú",
+    "skipToContent": "Saltar al contenido"
+  },
+  "families": {
+    "minimotos": "Minimotos",
+    "miniquads": "Mini Quads",
+    "pitbikes": "Pit Bikes",
+    "buggies": "Buggies",
+    "electricas": "Eléctricas",
+    "equipacion": "Equipación",
+    "recambios": "Recambios",
+    "accesorios": "Accesorios"
+  },
+  "common": {
+    "viewMore": "Ver más",
+    "viewAll": "Ver todo",
+    "buy": "Comprar",
+    "addToCart": "Añadir al carrito",
+    "askWhatsapp": "Consultar por WhatsApp",
+    "reserve": "Reservar",
+    "from": "Desde",
+    "new": "Nuevo",
+    "offer": "Oferta",
+    "soldOut": "Agotado",
+    "loading": "Cargando…",
+    "placeholderNotice": "Contenido de demostración — pendiente de datos reales",
+    "scroll": "Scroll",
+    "open": "Abierto ahora",
+    "closed": "Cerrado ahora",
+    "gasoline": "Gasolina",
+    "electric": "Eléctrica"
+  },
+  "hero": {
+    "eyebrow": "// Ciudad Real · Venta + Taller",
+    "title": "Adrenalina en miniatura",
+    "subtitle": "Minimotos, quads, pit bikes y buggies. Venta y taller en Ciudad Real.",
+    "ctaShop": "Ver tienda",
+    "ctaWhatsapp": "Pide por WhatsApp"
+  },
+  "marquee": {
+    "items": "VENTA ✦ TALLER ✦ RECAMBIOS ✦ EQUIPACIÓN ✦ GASOLINA ✦ ELÉCTRICAS ✦ CIUDAD REAL ✦"
+  },
+  "familiesSection": {
+    "eyebrow": "✦ La gama",
+    "title": "Elige tu máquina",
+    "subtitle": "Ocho familias. De la primera minimoto al buggy que se come la pista."
+  },
+  "featured": {
+    "eyebrow": "✦ Destacados",
+    "title": "Listas para rodar",
+    "subtitle": "Selección de la casa. Configuramos y entregamos."
+  },
+  "panels": {
+    "venta": {
+      "eyebrow": "01 / Venta",
+      "title": "La gama, lista para rodar",
+      "body": "Configuramos y entregamos. Gasolina o eléctrica, para empezar o para competir."
+    },
+    "taller": {
+      "eyebrow": "02 / Taller",
+      "title": "¿No arranca?",
+      "body": "Diagnóstico y presupuesto claro, sin sorpresas en la factura."
+    },
+    "equipacion": {
+      "eyebrow": "03 / Equipación",
+      "title": "Sal a por todas, protegido",
+      "body": "Cascos, protecciones y ropa cross. Equípate antes de pisar el acelerador."
+    }
+  },
+  "signature": {
+    "eyebrow": "✦ La gama en movimiento",
+    "title": "De cero a leyenda"
+  },
+  "tiktok": {
+    "eyebrow": "✦ Comunidad",
+    "title": "Nos ves rodando",
+    "subtitle": "Lo último de @minimotos_ciudadreal.",
+    "cta": "Ver en TikTok"
+  },
+  "testimonials": {
+    "eyebrow": "✦ Opiniones",
+    "title": "Lo que dicen",
+    "empty": "Reseñas reales muy pronto."
+  },
+  "location": {
+    "eyebrow": "✦ Dónde estamos",
+    "title": "Pásate por la tienda",
+    "address": "Avenida de Valdepeñas, 13004 Ciudad Real",
+    "schedule": "Horario",
+    "directions": "Cómo llegar",
+    "call": "Llamar",
+    "whatsapp": "WhatsApp"
+  },
+  "newsletter": {
+    "eyebrow": "✦ No te pierdas nada",
+    "title": "Novedades, ofertas y quedadas",
+    "placeholder": "tu@email.com",
+    "submit": "Apuntarme",
+    "success": "¡Listo! Te avisaremos.",
+    "error": "Algo ha fallado. Inténtalo de nuevo."
+  },
+  "footer": {
+    "tagline": "Venta y taller de minimotos en Ciudad Real.",
+    "madeIn": "Hecho en Ciudad Real",
+    "rights": "Todos los derechos reservados",
+    "legal": "Legal",
+    "explore": "Explora",
+    "contactTitle": "Contacto"
+  },
+  "shop": {
+    "title": "Tienda",
+    "results": "{count, plural, =0 {Sin resultados} one {# producto} other {# productos}}",
+    "filters": "Filtros",
+    "sort": "Ordenar",
+    "sortRelevance": "Relevancia",
+    "sortPriceAsc": "Precio: menor a mayor",
+    "sortPriceDesc": "Precio: mayor a menor",
+    "sortNewest": "Novedades",
+    "clear": "Limpiar",
+    "energy": "Energía",
+    "price": "Precio",
+    "family": "Familia",
+    "empty": "No hay productos con esos filtros."
+  },
+  "product": {
+    "specs": "Ficha técnica",
+    "related": "También te puede gustar",
+    "displacement": "Cilindrada",
+    "power": "Potencia",
+    "topSpeed": "Vel. máx",
+    "range": "Autonomía",
+    "ageMin": "Edad mín.",
+    "pickup": "Recogida en tienda disponible",
+    "vehicleNotice": "Vehículo: consulta financiación, recogida y matriculación por WhatsApp."
+  },
+  "cart": {
+    "title": "Tu carrito",
+    "empty": "El carrito está vacío",
+    "emptyCta": "Ir a la tienda",
+    "subtotal": "Subtotal",
+    "checkout": "Tramitar pedido",
+    "checkoutWhatsapp": "Tramitar por WhatsApp",
+    "remove": "Quitar",
+    "quantity": "Cantidad",
+    "continue": "Seguir comprando"
+  },
+  "contact": {
+    "title": "Hablamos",
+    "name": "Nombre",
+    "email": "Email",
+    "phone": "Teléfono",
+    "message": "Mensaje",
+    "send": "Enviar",
+    "success": "Mensaje enviado. Te respondemos pronto.",
+    "error": "No se pudo enviar. Escríbenos por WhatsApp."
+  }
+}

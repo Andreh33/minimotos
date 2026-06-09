@@ -1,0 +1,171 @@
+{
+  "meta": {
+    "title": "Mini Motos · Ciudad Real — Mini bikes, quads, pit bikes & buggies",
+    "description": "Sales and workshop for mini bikes, mini quads, pit bikes and buggies in Ciudad Real. Petrol and electric, motocross gear and spare parts."
+  },
+  "nav": {
+    "shop": "Shop",
+    "services": "Workshop",
+    "about": "About",
+    "contact": "Contact",
+    "cart": "Cart",
+    "menu": "Menu",
+    "close": "Close",
+    "families": "Families",
+    "openMenu": "Open menu",
+    "skipToContent": "Skip to content"
+  },
+  "families": {
+    "minimotos": "Mini Bikes",
+    "miniquads": "Mini Quads",
+    "pitbikes": "Pit Bikes",
+    "buggies": "Buggies",
+    "electricas": "Electric",
+    "equipacion": "Gear",
+    "recambios": "Spare Parts",
+    "accesorios": "Accessories"
+  },
+  "common": {
+    "viewMore": "View more",
+    "viewAll": "View all",
+    "buy": "Buy",
+    "addToCart": "Add to cart",
+    "askWhatsapp": "Ask on WhatsApp",
+    "reserve": "Reserve",
+    "from": "From",
+    "new": "New",
+    "offer": "Sale",
+    "soldOut": "Sold out",
+    "loading": "Loading…",
+    "placeholderNotice": "Demo content — pending real data",
+    "scroll": "Scroll",
+    "open": "Open now",
+    "closed": "Closed now",
+    "gasoline": "Petrol",
+    "electric": "Electric"
+  },
+  "hero": {
+    "eyebrow": "// Ciudad Real · Sales + Workshop",
+    "title": "Adrenaline, miniature",
+    "subtitle": "Mini bikes, quads, pit bikes and buggies. Sales and workshop in Ciudad Real.",
+    "ctaShop": "Visit shop",
+    "ctaWhatsapp": "Order on WhatsApp"
+  },
+  "marquee": {
+    "items": "SALES ✦ WORKSHOP ✦ SPARES ✦ GEAR ✦ PETROL ✦ ELECTRIC ✦ CIUDAD REAL ✦"
+  },
+  "familiesSection": {
+    "eyebrow": "✦ The range",
+    "title": "Pick your machine",
+    "subtitle": "Eight families. From a first mini bike to a track-eating buggy."
+  },
+  "featured": {
+    "eyebrow": "✦ Featured",
+    "title": "Ready to ride",
+    "subtitle": "House picks. We set them up and deliver."
+  },
+  "panels": {
+    "venta": {
+      "eyebrow": "01 / Sales",
+      "title": "The range, ready to ride",
+      "body": "We set up and deliver. Petrol or electric, to start out or to race."
+    },
+    "taller": {
+      "eyebrow": "02 / Workshop",
+      "title": "Won't start?",
+      "body": "Clear diagnosis and quote, no surprises on the bill."
+    },
+    "equipacion": {
+      "eyebrow": "03 / Gear",
+      "title": "Go all in, protected",
+      "body": "Helmets, protection and motocross apparel. Gear up before you twist the throttle."
+    }
+  },
+  "signature": {
+    "eyebrow": "✦ The range in motion",
+    "title": "Zero to legend"
+  },
+  "tiktok": {
+    "eyebrow": "✦ Community",
+    "title": "Catch us riding",
+    "subtitle": "Latest from @minimotos_ciudadreal.",
+    "cta": "Watch on TikTok"
+  },
+  "testimonials": {
+    "eyebrow": "✦ Reviews",
+    "title": "What they say",
+    "empty": "Real reviews coming soon."
+  },
+  "location": {
+    "eyebrow": "✦ Where we are",
+    "title": "Drop by the shop",
+    "address": "Avenida de Valdepeñas, 13004 Ciudad Real",
+    "schedule": "Opening hours",
+    "directions": "Directions",
+    "call": "Call",
+    "whatsapp": "WhatsApp"
+  },
+  "newsletter": {
+    "eyebrow": "✦ Don't miss out",
+    "title": "News, deals and meetups",
+    "placeholder": "you@email.com",
+    "submit": "Sign me up",
+    "success": "Done! We'll keep you posted.",
+    "error": "Something went wrong. Try again."
+  },
+  "footer": {
+    "tagline": "Mini bike sales and workshop in Ciudad Real.",
+    "madeIn": "Made in Ciudad Real",
+    "rights": "All rights reserved",
+    "legal": "Legal",
+    "explore": "Explore",
+    "contactTitle": "Contact"
+  },
+  "shop": {
+    "title": "Shop",
+    "results": "{count, plural, =0 {No results} one {# product} other {# products}}",
+    "filters": "Filters",
+    "sort": "Sort",
+    "sortRelevance": "Relevance",
+    "sortPriceAsc": "Price: low to high",
+    "sortPriceDesc": "Price: high to low",
+    "sortNewest": "Newest",
+    "clear": "Clear",
+    "energy": "Energy",
+    "price": "Price",
+    "family": "Family",
+    "empty": "No products match those filters."
+  },
+  "product": {
+    "specs": "Specs",
+    "related": "You might also like",
+    "displacement": "Displacement",
+    "power": "Power",
+    "topSpeed": "Top speed",
+    "range": "Range",
+    "ageMin": "Min. age",
+    "pickup": "In-store pickup available",
+    "vehicleNotice": "Vehicle: ask about financing, pickup and registration on WhatsApp."
+  },
+  "cart": {
+    "title": "Your cart",
+    "empty": "Your cart is empty",
+    "emptyCta": "Go to shop",
+    "subtotal": "Subtotal",
+    "checkout": "Checkout",
+    "checkoutWhatsapp": "Checkout on WhatsApp",
+    "remove": "Remove",
+    "quantity": "Quantity",
+    "continue": "Keep shopping"
+  },
+  "contact": {
+    "title": "Let's talk",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "message": "Message",
+    "send": "Send",
+    "success": "Message sent. We'll reply soon.",
+    "error": "Couldn't send. Reach us on WhatsApp."
+  }
+}
