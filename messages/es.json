@@ -167,5 +167,31 @@
     "send": "Enviar",
     "success": "Mensaje enviado. Te respondemos pronto.",
     "error": "No se pudo enviar. Escríbenos por WhatsApp."
+  },
+  "servicesPage": {
+    "eyebrow": "// Taller",
+    "title": "Taller propio",
+    "subtitle": "Diagnóstico y presupuesto claro, sin sorpresas en la factura.",
+    "stepsTitle": "Cómo funciona",
+    "step1Title": "Tráenoslo",
+    "step1Body": "Pásate por la tienda o escríbenos. Cuéntanos qué le pasa.",
+    "step2Title": "Diagnóstico",
+    "step2Body": "Revisamos la máquina y localizamos el problema.",
+    "step3Title": "Presupuesto",
+    "step3Body": "Te pasamos un presupuesto claro antes de tocar nada.",
+    "step4Title": "Reparado",
+    "step4Body": "Lista para rodar. Te avisamos para que la recojas.",
+    "whatTitle": "Qué arreglamos",
+    "what": "Motor · Carburación · Frenos · Transmisión · Eléctrico · Puesta a punto · Cambio de neumáticos · Mantenimiento general",
+    "cta": "Pide cita por WhatsApp"
+  },
+  "aboutPage": {
+    "eyebrow": "// Nosotros",
+    "title": "Mini Motos Ciudad Real",
+    "intro": "Venta y taller de minimotos, mini quads, pit bikes y buggies en Ciudad Real. Gasolina y eléctricas, equipación y recambios.",
+    "physicalTitle": "Tienda física",
+    "physicalBody": "Pásate por Avenida de Valdepeñas y te asesoramos en persona.",
+    "tiktokTitle": "Síguenos",
+    "tiktokBody": "Lo último, en nuestro TikTok."
   }
 }

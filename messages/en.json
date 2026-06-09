@@ -167,5 +167,31 @@
     "send": "Send",
     "success": "Message sent. We'll reply soon.",
     "error": "Couldn't send. Reach us on WhatsApp."
+  },
+  "servicesPage": {
+    "eyebrow": "// Workshop",
+    "title": "In-house workshop",
+    "subtitle": "Clear diagnosis and quote, no surprises on the bill.",
+    "stepsTitle": "How it works",
+    "step1Title": "Bring it in",
+    "step1Body": "Drop by the shop or message us. Tell us what's wrong.",
+    "step2Title": "Diagnosis",
+    "step2Body": "We inspect the machine and find the problem.",
+    "step3Title": "Quote",
+    "step3Body": "We send a clear quote before touching anything.",
+    "step4Title": "Fixed",
+    "step4Body": "Ready to ride. We'll let you know when to pick it up.",
+    "whatTitle": "What we fix",
+    "what": "Engine · Carburation · Brakes · Transmission · Electrics · Tuning · Tyre changes · General maintenance",
+    "cta": "Book on WhatsApp"
+  },
+  "aboutPage": {
+    "eyebrow": "// About",
+    "title": "Mini Motos Ciudad Real",
+    "intro": "Sales and workshop for mini bikes, mini quads, pit bikes and buggies in Ciudad Real. Petrol and electric, gear and spare parts.",
+    "physicalTitle": "Physical store",
+    "physicalBody": "Drop by Avenida de Valdepeñas and we'll advise you in person.",
+    "tiktokTitle": "Follow us",
+    "tiktokBody": "Latest drops on our TikTok."
   }
 }

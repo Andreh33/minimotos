@@ -1,0 +1,12 @@
+- generic [active] [ref=e1]:
+  - main [ref=e2]:
+    - generic [ref=e3]:
+      - paragraph [ref=e4]: // Panel
+      - heading "Admin" [level=1] [ref=e5]
+      - paragraph [ref=e6]:
+        - text: Configura
+        - code [ref=e7]: ADMIN_PASSWORD
+        - text: en las variables de entorno para activar el panel.
+  - button "Open Next.js Dev Tools" [ref=e13] [cursor=pointer]:
+    - img [ref=e14]
+  - alert [ref=e19]

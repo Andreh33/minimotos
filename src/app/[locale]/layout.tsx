@@ -7,6 +7,7 @@ import { fontVariables } from "@/lib/fonts";
 import { SmoothScroll } from "@/lib/motion/SmoothScroll";
 import { SiteChrome } from "@/components/layout/SiteChrome";
 import { Footer } from "@/components/layout/Footer";
+import { LocalBusinessJsonLd } from "@/components/seo/LocalBusinessJsonLd";
 import { site } from "@/lib/site";
 import "../globals.css";
 
@@ -61,6 +62,7 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} className={fontVariables} suppressHydrationWarning>
       <body className="bg-mm-black text-mm-text antialiased">
+        <LocalBusinessJsonLd />
         <NextIntlClientProvider>
           <a
             href="#contenido"
